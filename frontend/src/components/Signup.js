@@ -9,7 +9,7 @@ const Signup = ({ showAlert }) => {
         e.preventDefault();
         const { name, email, password, cpassword } = credentials;
 
-        // Check if passwords match
+        // Check if passwords matcha
         if (password !== cpassword) {
             showAlert("Passwords do not match", "danger");
             return;
