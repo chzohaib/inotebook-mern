@@ -8,7 +8,7 @@ const cors = require('cors');
 connectToMongo();
 
 const app = express();
-const port = process.env.PORT || 5000; // Use environment variable for production
+// const port = process.env.PORT || 5000; // Use environment variable for production
 
 // ========================================================================
 // 2️⃣ Middleware
@@ -33,9 +33,4 @@ app.get('/', (req, res) => {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/note'));
 
-// ========================================================================
-// 5️⃣ Start server
-// ========================================================================
-app.listen(port, () => {
-    console.log(`iNotebook backend listening at http://localhost:${port}`);
-});
+module.exports = app;
